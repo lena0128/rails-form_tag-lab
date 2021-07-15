@@ -1,0 +1,13 @@
+<h1>Student Form</h1>
+<%= form_tag students_path do %>
+  
+  <label>First Name:</label><br>
+  <%=text_field_tag :'student[first_name]' %><br>
+   
+   <label>Last Name:</label><br>
+   <%=text_field_tag :'student[last_name]' %><br>
+
+   # Rails form_tag automatically generates the necessary authenticity token for us, so we can remove the below from our codes.
+   # <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+   <%= submit_tag "Submit Student" %>
+<%end%>
